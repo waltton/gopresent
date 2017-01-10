@@ -5,5 +5,47 @@ Tags: go, iniciante, API
 Waltton Morais
 Developer, 2xt
 walttonm@gmail.com
-https://github.com/waltton
 @waltton
+
+* Slides
+Estes slides já estão disponíveis em [[https://goo.gl/hazR3Y][https://goo.gl/hazR3Y]]
+
+
+* Olá Mundo :D
+
+.code -numbers /olamundo/ola.0.go
+
+: O pacote fmt implementa funções similares ao printf e scanf do C
+
+
+* Agora via HTTP
+
+.code -numbers /olamundo/ola.1.go
+
+: O pacote net/http fornece implementações de cliente e servidor HTTP(s)
+: "Source code is Unicode text encoded in UTF-8."
+
+* Flags
+
+.code -numbers /olamundo/ola.2.go
+
+: Existem varias maneiras de configurar uma aplicação go usando a biblioteca padrão (uma pena não ter parser yaml)
+: Podemos usar: variaveis de ambientes, arquivos de configuração ou argumentos(flags) para a aplicação
+
+
+* Autenticação/Authorização
+
+.code -numbers /olamundo/ola.3.go /^func auth/,/^}/
+.code -numbers /olamundo/ola.3.go /^func main/,/^}/
+
+* Contexto
+
+.code -numbers /olamundo/ola.4.go /^func auth/,/^}/ HLxxx
+.code -numbers /olamundo/ola.4.go /^func oláGophers/,/^}/
+
+: Go 1.7 moves the golang.org/x/net/context package into the standard library as context. This allows the use of contexts for cancelation, timeouts, and passing request-scoped data in other standard library packages, including net, net/http, and os/exec, as noted below.
+
+
+* TLS
+
+.code -numbers /olamundo/ola.5.go /^func main/,/^}/
