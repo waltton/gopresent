@@ -5,14 +5,14 @@ import (
 	"net/http"
 )
 
-func auth(f func(w http.ResponseWriter, r *http.Request)) func(w http.ResponseWriter, r *http.Request) {
+func auth(next func(w http.ResponseWriter, r *http.Request)) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		_, password, ok := r.BasicAuth()
 		if !(ok && password == "gopher-belô") {
 			w.WriteHeader(401)
 			return
 		}
-		f(w, r)
+		next(w, r)
 	}
 }
 

@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func auth(f func(w http.ResponseWriter, r *http.Request)) func(w http.ResponseWriter, r *http.Request) {
+func auth(next func(w http.ResponseWriter, r *http.Request)) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		username, password, ok := r.BasicAuth() // HLxxx
 		if !(ok && password == "gopher-belô") {
@@ -15,7 +15,7 @@ func auth(f func(w http.ResponseWriter, r *http.Request)) func(w http.ResponseWr
 			return
 		}
 		ctx := context.WithValue(r.Context(), "username", username) // HLxxx
-		f(w, r.WithContext(ctx))                                    // HLxxx
+		next(w, r.WithContext(ctx))                                 // HLxxx
 	}
 }
 
