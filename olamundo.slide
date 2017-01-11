@@ -7,14 +7,16 @@ Developer, 2xt
 walttonm@gmail.com
 @waltton
 
-* Slides
-Estes slides já estão disponíveis em [[https://goo.gl/hazR3Y][https://goo.gl/hazR3Y]]
+: boa noite, nome, dev na 2xt, trabalho python e novo projeto em go
+: obrigado cassio e joão organização dos meetups, segundo meetup (não meetup de go, meetup mesmo), minha primeira palestra
 
 
 * Olá Mundo :D
 
 .code -numbers /olamundo/olamundo/main.go
 
+: apresentação para iniciantes visto que a comunidade é nova, nada mais aproriado que começar com um olá mundo
+: parece trivial mas fmt é um pacote MUITO importante e de uso cotidiano
 : O pacote fmt implementa funções similares ao printf e scanf do C
 
 
